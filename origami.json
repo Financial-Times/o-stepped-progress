@@ -29,6 +29,12 @@
 	},
 	"demos": [
 		{
+			"title": "Testing",
+			"name": "testing",
+			"template": "demos/src/testing.mustache",
+			"description": "Testing styles"
+		},
+		{
 			"title": "Pa11y",
 			"name": "pa11y",
 			"template": "demos/src/pa11y.mustache",
