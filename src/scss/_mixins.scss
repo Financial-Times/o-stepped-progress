@@ -1,11 +1,30 @@
 
 /// Outputs all available features and styles for stepped progress.
 ///
+/// @output The output includes the `.o-stepped-progress` class definition as well as class definitions for every available theme.
+/// @example scss - All stepped progress styles
+///   @include oSteppedProgress();
+/// @example scss - Base styles with 'heavy' theme
+///   @include oLabels((
+///     'themes': (
+///       'heavy'
+///     )
+///   ));
 /// @access public
-@mixin oSteppedProgress() {
+@mixin oSteppedProgress($opts: (
+	'themes': (
+		'heavy'
+	)
+)) {
+	$themes: map_get($opts, 'themes');
 
 	// Base stepped progress styles
 	@include _oSteppedProgressBase();
+
+	// Heavy theme
+	@if index($themes, 'heavy') and _oSteppedProgressSupports('heavy') {
+		@include _oSteppedProgressHeavy();
+	}
 
 }
 
@@ -174,10 +193,68 @@
 
 }
 
-/// Output a stepped progress specific error message
+/// Heavy theme for the stepped progress component.
 ///
-/// @param {String} $message - The message to insert in the error.
+/// @output The output includes the `.o-stepped-progress--heavy` class definition and all style overrides for it.
+/// @example scss - Heavy stepped progress styles
+///   @include _oSteppedProgressHeavy();
 /// @access private
-@mixin _oSteppedProgressError($message) {
-	@error '*** oSteppedProgress SCSS error: #{$message} ***';
-};
+@mixin _oSteppedProgressHeavy() {
+	$variant: 'heavy';
+
+	.o-stepped-progress--heavy {
+
+		@include oTypographySans(_oSteppedProgressGet('font-scale', $variant));
+
+		// Progress bars
+		&:before {
+			height: _oSteppedProgressGet('bar-weight', $variant);
+			top: (_oSteppedProgressGet('step-size', $variant) / 2) - (_oSteppedProgressGet('bar-weight', $variant) / 2);
+		}
+		.o-stepped-progress__step--complete,
+		.o-stepped-progress__step--current,
+		.o-stepped-progress__step--error {
+			&:after {
+				height: _oSteppedProgressGet('bar-weight', $variant);
+				top: (_oSteppedProgressGet('step-size', $variant) / 2) - (_oSteppedProgressGet('bar-weight', $variant) / 2);
+			}
+		}
+
+		// The step type indicator
+		.o-stepped-progress__step {
+			&:before {
+				height: _oSteppedProgressGet('step-size', $variant) - (_oSteppedProgressGet('step-border-size', $variant) * 2);
+				width: _oSteppedProgressGet('step-size', $variant) - (_oSteppedProgressGet('step-border-size', $variant) * 2);
+				border-width: _oSteppedProgressGet('step-border-size', $variant);
+			}
+		}
+
+		// Completed step modifier
+		.o-stepped-progress__step--complete {
+			&:before {
+				background-color: _oSteppedProgressGet('container-background');
+				background-size: 160%;
+				background-position: 35% 35%;
+				background-origin: content-box;
+				border-color: _oSteppedProgressGet('interacted-color');
+
+				@include oIconsGetIcon(
+					$icon-name: 'tick',
+					$color: _oSteppedProgressGet('interacted-color'),
+					$apply-base-styles: false,
+					$apply-width-height: false
+				);
+			}
+		}
+
+		// Current step modifier
+		.o-stepped-progress__step--current {
+			&:before {
+				background-color: _oSteppedProgressGet('container-background');
+				box-shadow: none;
+			}
+		}
+
+	}
+
+}

@@ -35,8 +35,17 @@ $_o-stepped-progress-shared-brand-config: (
 // Define internal brand
 @if oBrandGetCurrentBrand() == 'internal' {
 	@include oBrandDefine('o-stepped-progress', 'internal', (
-		'variables': map-merge($_o-stepped-progress-shared-brand-config, ()),
-		'supports-variants': ()
+		'variables': map-merge($_o-stepped-progress-shared-brand-config, (
+			'heavy': (
+				font-scale: 0,
+				step-size: 26px,
+				step-border-size: 5px,
+				bar-weight: 6px
+			)
+		)),
+		'supports-variants': (
+			'heavy'
+		)
 	));
 }
 
