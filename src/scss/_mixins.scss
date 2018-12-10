@@ -37,9 +37,9 @@
 @mixin _oSteppedProgressBase() {
 
 	.o-stepped-progress {
+		@include oTypographySans(_oSteppedProgressGet('font-scale'));
 		display: block;
 		position: relative;
-		@include oTypographySans(_oSteppedProgressGet('font-scale'));
 
 		a {
 			color: inherit;
@@ -149,14 +149,14 @@
 	// Completed step modifier
 	.o-stepped-progress__step--complete {
 		&:before {
-			background-color: _oSteppedProgressGet('interacted-color');
-			border-color: transparent;
 			@include oIconsGetIcon(
 				$icon-name: 'tick',
 				$color: _oSteppedProgressGet('container-background'),
 				$apply-base-styles: false,
 				$apply-width-height: false
 			);
+			background-color: _oSteppedProgressGet('interacted-color');
+			border-color: transparent;
 		}
 	}
 
@@ -172,14 +172,14 @@
 	// Errored step modifier
 	.o-stepped-progress__step--error {
 		&:before {
-			background-color: _oSteppedProgressGet('error-color');
-			border-color: transparent;
 			@include oIconsGetIcon(
 				$icon-name: 'warning',
 				$color: _oSteppedProgressGet('container-background'),
 				$apply-base-styles: false,
 				$apply-width-height: false
 			);
+			background-color: _oSteppedProgressGet('error-color');
+			border-color: transparent;
 		}
 	}
 
@@ -203,7 +203,6 @@
 	$variant: 'heavy';
 
 	.o-stepped-progress--heavy {
-
 		@include oTypographySans(_oSteppedProgressGet('font-scale', $variant));
 
 		// Progress bars
@@ -232,18 +231,17 @@
 		// Completed step modifier
 		.o-stepped-progress__step--complete {
 			&:before {
-				background-color: _oSteppedProgressGet('container-background');
-				background-size: 160%;
-				background-position: 35% 35%;
-				background-origin: content-box;
-				border-color: _oSteppedProgressGet('interacted-color');
-
 				@include oIconsGetIcon(
 					$icon-name: 'tick',
 					$color: _oSteppedProgressGet('interacted-color'),
 					$apply-base-styles: false,
 					$apply-width-height: false
 				);
+				background-color: _oSteppedProgressGet('container-background');
+				background-size: 160%;
+				background-position: 35% 35%;
+				background-origin: content-box;
+				border-color: _oSteppedProgressGet('interacted-color');
 			}
 		}
 
