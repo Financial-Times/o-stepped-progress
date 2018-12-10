@@ -16,7 +16,7 @@ $_o-stepped-progress-shared-brand-config: (
 	font-scale: -1,
 	step-size: 22px,
 	step-border-size: 2px,
-	label-max-width: 140px,
+	label-max-width: 10em,
 	bar-weight: 2px,
 	container-background: oColorsGetPaletteColor(oColorsGetUseCase('page', 'background')),
 	default-color: oColorsGetPaletteColor('black-40'),
