@@ -24,6 +24,7 @@
 		"js": "demos/src/demo.js",
 		"dependencies": [
 			"o-fonts@^3.0.0",
+			"o-icons@^5.8.0",
 			"o-normalise@^1.0.0"
 		]
 	},
