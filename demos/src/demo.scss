@@ -12,7 +12,15 @@ body {
 	margin-bottom: 2em;
 	max-width: 600px;
 }
-.demo-container:last-child {
+.demo-container:last-of-type {
 	margin-bottom: 0;
 }
 
+.edit-icon {
+	@include oIconsGetIcon(
+		$icon-name: 'edit',
+		$container-width: 20px,
+		$color: #000
+	);
+	vertical-align: middle;
+}

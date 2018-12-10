@@ -1,0 +1,19 @@
+{
+	"steps": [
+		{
+			"label": "Step with icon <span class=\"edit-icon\"><!-- See demo SCSS for implementation --></span>",
+			"accessibleLabel": "Step with icon",
+			"url": "#edit",
+			"isComplete": true
+		},
+		{
+			"label": "Step with<br/>multiple</br>line breaks",
+			"accessibleLabel": "Step with multiple line breaks",
+			"isCurrent": true
+		},
+		{
+			"label": "Step with <strong>bold</strong> and <em>italic</em> text",
+			"accessibleLabel": "Step with bold and italic text"
+		}
+	]
+}
