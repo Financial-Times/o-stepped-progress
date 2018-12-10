@@ -10,6 +10,9 @@ body {
 
 .demo-container {
 	margin-bottom: 2em;
-	max-width: 600px; // TODO remove
+	max-width: 600px;
+}
+.demo-container:last-child {
+	margin-bottom: 0;
 }
 
