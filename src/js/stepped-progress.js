@@ -105,7 +105,7 @@ class SteppedProgress {
 	 * @returns {Boolean} Returns whether all steps are completed.
 	 */
 	isComplete() {
-		return (this.getCompletedSteps().length === this._steps.length);
+		return this._steps.every(step => step.isComplete());
 	}
 
 	/**
