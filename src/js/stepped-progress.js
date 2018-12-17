@@ -142,20 +142,14 @@ class SteppedProgress {
 	}
 
 	/**
-	 * Construct step instances and store them on the  `_steps` and `_stepElementInstanceMap` properties.
+	 * Construct step instances and store them on the `_steps` property.
 	 *
 	 * @access private
 	 * @returns {void}
 	 */
 	_constructSteps() {
 		const elements = this.steppedProgressElement.querySelectorAll(`.${classNames.step}`);
-		this._stepElementInstanceMap = new Map([...elements].map(element => {
-			return [
-				element,
-				new SteppedProgressStep(element, this)
-			];
-		}));
-		this._steps = [...this._stepElementInstanceMap.values()];
+		this._steps = [...elements].map(element => new SteppedProgressStep(element, this));
 	}
 
 	/**

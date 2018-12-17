@@ -484,50 +484,6 @@ describe('src/js/stepped-progress', () => {
 
 		});
 
-		describe('._stepElementInstanceMap', () => {
-
-			it('is a map of elements to `SteppedProgressStep` instances', () => {
-				assert.instanceOf(steppedProgress._stepElementInstanceMap, Map);
-				for (const key of steppedProgress._stepElementInstanceMap.keys()) {
-					assert.instanceOf(key, HTMLElement);
-				}
-				for (const key of steppedProgress._stepElementInstanceMap.values()) {
-					assert.instanceOf(key, SteppedProgressStep);
-				}
-			});
-
-			describe('each entry in the map', () => {
-				let stepElements;
-
-				beforeEach(() => {
-					stepElements = mockSteppedProgressElement.querySelectorAll('.o-stepped-progress__step');
-				});
-
-				// The length of this array is based on mock HTML
-				// found in: ./helpers/fixtures.js
-				for (const index of Array(4).keys()) {
-					describe(`map value for step element #${index}`, () => {
-						let value;
-
-						beforeEach(() => {
-							value = steppedProgress._stepElementInstanceMap.get(stepElements[index]);
-						});
-
-						it('has a `.stepElement` property set to the corresponding HTML element', () => {
-							assert.strictEqual(value.stepElement, stepElements[index]);
-						});
-
-						it('has a `.parent` property set to the `SteppedProgress` instance', () => {
-							assert.strictEqual(value.parent, steppedProgress);
-						});
-
-					});
-				}
-
-			});
-
-		});
-
 	});
 
 });
