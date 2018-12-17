@@ -1,4 +1,5 @@
 /* eslint-env mocha */
+/* eslint-disable no-loop-func */
 
 import * as assert from 'proclaim';
 import * as fixtures from './helpers/fixtures';
