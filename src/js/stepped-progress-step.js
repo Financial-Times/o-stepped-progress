@@ -211,7 +211,9 @@ class SteppedProgressStep {
 	 * @returns {void}
 	 */
 	_clearStateClasses() {
-		this.stepElement.classList.remove(...stateClassNames);
+		for (const className of stateClassNames) {
+			this.stepElement.classList.remove(className);
+		}
 	}
 
 }
