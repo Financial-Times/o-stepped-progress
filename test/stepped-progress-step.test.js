@@ -1,9 +1,9 @@
 /* eslint-env mocha */
 
-import * as assert from 'proclaim';
-import * as fixtures from './helpers/fixtures';
-import sinon from 'sinon/pkg/sinon';
-import SteppedProgressStep from '../src/js/stepped-progress-step';
+const assert =  require('proclaim');
+const fixtures = require('./helpers/fixtures');
+const sinon = require('sinon/pkg/sinon');
+const SteppedProgressStep = require('../src/js/stepped-progress-step');
 
 describe('src/js/stepped-progress-step', () => {
 
