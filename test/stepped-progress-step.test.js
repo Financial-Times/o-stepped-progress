@@ -1,6 +1,6 @@
 /* eslint-env mocha */
 
-const assert =  require('proclaim');
+const assert = require('proclaim');
 const fixtures = require('./helpers/fixtures');
 const sinon = require('sinon/pkg/sinon');
 const SteppedProgressStep = require('../src/js/stepped-progress-step');
