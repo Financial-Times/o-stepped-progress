@@ -186,7 +186,7 @@ This table outlines all of the possible themes you can request in the [`oStepped
 
 ## Contact
 
-If you have any questions or comments about this component, or need help using it, please either [raise an issue](https://github.com/Financial-Times/o-stepped-progress/issues), visit [#ft-origami](https://financialtimes.slack.com/messages/ft-origami/) or email [Origami Support](mailto:origami-support@ft.com).
+If you have any questions or comments about this component, or need help using it, please either [raise an issue](https://github.com/Financial-Times/o-stepped-progress/issues), visit [#origami-support](https://financialtimes.slack.com/messages/origami-support/) or email [Origami Support](mailto:origami-support@ft.com).
 
 
 ## Licence
