@@ -10,7 +10,6 @@
         "stylelint-config-origami-component": "^1.0.4"
     },
     "name": "@financial-times/o-stepped-progress",
-    "private": true,
     "main": "main.js",
     "peerDependencies": {
         "@financial-times/o-colors": "^100.0.0-3",
