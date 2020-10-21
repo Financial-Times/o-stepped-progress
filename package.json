@@ -9,7 +9,7 @@
         "stylelint": "^13.7.0",
         "stylelint-config-origami-component": "^1.0.4"
     },
-    "name": "o-stepped-progress",
+    "name": "@financial-times/o-stepped-progress",
     "private": true,
     "main": "main.js",
     "peerDependencies": {
