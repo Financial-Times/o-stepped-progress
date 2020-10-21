@@ -12,15 +12,15 @@
     "name": "@financial-times/o-stepped-progress",
     "main": "main.js",
     "peerDependencies": {
-        "@financial-times/o-colors": "^100.0.0-3",
-        "@financial-times/o-icons": "^100.0.0-3",
-        "@financial-times/o-normalise": "^100.0.0-3",
-        "@financial-times/o-spacing": "^100.0.0-3",
-        "@financial-times/o-typography": "^100.0.0-3"
+        "@financial-times/o-colors": "^100.0.0-4",
+        "@financial-times/o-icons": "^100.0.0-4",
+        "@financial-times/o-normalise": "^100.0.0-4",
+        "@financial-times/o-spacing": "^100.0.0-4",
+        "@financial-times/o-typography": "^100.0.0-4"
     },
     "description": "Track progress through a multi-step process, such as a form",
     "publishConfig": {
         "registry": "http://localhost:4873"
     },
-    "version": "100.0.0-3"
+    "version": "100.0.0-4"
 }
