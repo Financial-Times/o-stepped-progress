@@ -139,7 +139,7 @@ As with all Origami components, o-stepped-progress has a [silent mode](http://or
 
 ```scss
 $o-stepped-progress-is-silent: false;
-@import 'o-stepped-progress/main';
+@import '@financial-times/o-stepped-progress/main';
 ```
 
 ### Mixin: `oSteppedProgress`
