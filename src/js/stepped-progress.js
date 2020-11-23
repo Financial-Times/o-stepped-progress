@@ -166,8 +166,8 @@ class SteppedProgress {
 		}
 		return Object.keys(steppedProgressElement.dataset).reduce((options, key) => {
 
-			// Ignore data-o-component
-			if (key === 'oComponent') {
+			// Ignore keys which are not in the component's namespace
+			if (!key.match(/^oSteppedProgress(\w)(\w+)$/)) {
 				return options;
 			}
 
