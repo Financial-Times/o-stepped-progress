@@ -1,4 +1,11 @@
 # o-stepped-progress
+
+***
+
+**This component has moved to the [Origami Component System](https://github.com/Financial-Times/origami).**
+
+***
+
 Track progress through a multi-step process, such as a form.
 
 - [Usage](#usage)
